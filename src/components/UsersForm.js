@@ -49,6 +49,12 @@ const UsersForm = ({addUser,userEdit,updateUser,setUserEdit}) => {
     return (
         <div className='form-container'>
             <form onSubmit={submit}>
+                {userEdit?
+                    <>
+                        <h2 className='form-title'>Edit user</h2>
+                    </>
+                    :
+                    <h2 className='form-title'>New user</h2>}
                 <div className='input-container'>
                     <label htmlFor="">First name</label>
                     <input type="text" placeholder='First name' onChange={e=>{setFirst_name(e.target.value)}} value={first_name}/>
