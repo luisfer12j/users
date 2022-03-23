@@ -65,23 +65,23 @@ const UsersForm = ({addUser,userEdit,updateUser,setUserEdit}) => {
                 </div>
                 <div className='input-container'>
                     <label htmlFor="">Email</label>
-                    <input type="email" onChange={e=>{setEmail(e.target.value)}} value={email}/>
+                    <input type="email" onChange={e=>{setEmail(e.target.value)}} value={email} placeholder='Email'/>
                 </div>
                 <div className='input-container'>
                     <label htmlFor="">Password</label>
-                    <input type="password" onChange={e=>{setPassword(e.target.value)}} value={password}/>
+                    <input type="password" onChange={e=>{setPassword(e.target.value)}} value={password} placeholder='Password'/>
                 </div>
                 <div className='input-container'>
                     <label htmlFor="">Birthday</label>
-                    <input type="date" onChange={e=>{setBirthday(e.target.value)}} value={birthday}/>
+                    <input type="date" onChange={e=>{setBirthday(e.target.value)}} value={birthday} placeholder='DD/MM/YY'/>
                 </div>
                 {userEdit?
                     <>
-                        <button >Update user</button>
-                        <button type='button' onClick={()=>setUserEdit(null)}>Cancel</button>
+                        <button className='button-user' >Update user</button>
+                        <button className='button-user' type='button' onClick={()=>setUserEdit(null)}>Cancel</button>
                     </>
                     :
-                    <button>Add user</button>}
+                    <button className='button-user'>Add user</button>}
                 
 
             </form>
